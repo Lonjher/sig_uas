@@ -9,7 +9,6 @@
         <ul class="flex space-x-6 text-gray-50">
             <li><a href="/" class="hover:text-blue-800 font-medium transition duration-300">Home</a></li>
             <li><a href="/dashboard" class="hover:text-blue-800 font-medium transition duration-300">Dashboard</a></li>
-            <li><a href="/map" class="hover:text-blue-800 font-medium transition duration-300">Map</a></li>
             <li><a href="/about" class="hover:text-blue-800 font-medium transition duration-300">About</a></li>
         </ul>
         <div class="relative">
