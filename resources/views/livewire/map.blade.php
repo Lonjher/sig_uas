@@ -39,7 +39,7 @@
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         required />
                 </div>
-                <button  type="submit"
+                <button type="submit"
                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Simpan</button>
             </form>
         </div>
@@ -47,26 +47,53 @@
 </div>
 @push('scripts')
     <script>
+        const defaultCord = [113.675207, -7.065177]
         document.addEventListener('livewire:initialized', () => {
             mapboxgl.accessToken = '{{ env('MAPBOX_TOKEN') }}';
-            const map = new mapboxgl.Map({
+            const mapId = new mapboxgl.Map({
                 container: 'mapId', // container ID
-                center: [113.675207,
-                    -7.065177
-                ], // starting position [lng, lat]. Note that lat must be set between -90 and 90
-                zoom: 15 // starting zoom
+                center: defaultCord, // starting position [lng, lat]. Note that lat must be set between -90 and 90
+                zoom: 15, // starting zoom
             });
             const style = "standard"
-            map.setStyle(`mapbox://styles/mapbox/standar/${style}`)
+            mapId.setStyle(`mapbox://styles/mapbox/standar/${style}`)
 
-            map.addControl(new mapboxgl.NavigationControl())
+            mapId.addControl(new mapboxgl.NavigationControl())
 
-            map.on('click', (e) => {
+            mapId.on('click', (e) => {
                 const longitude = e.lngLat.lng
                 const lattitude = e.lngLat.lat
                 @this.longitude = longitude;
                 @this.lattitude = lattitude;
             })
+
+            let markers = [];
+
+            function updateMarkersOnMap(petas) {
+                displayMarkers(petas);
+            }
+
+            Livewire.on('updateMap', (petas) => {
+                updateMarkersOnMap(petas);
+            });
+
+            function displayMarkers(petas) {
+                // Hapus semua marker sebelumnya
+                markers.forEach(marker => marker.remove());
+                markers = [];
+
+                console.log(petas[0])
+                // Tambahkan marker baru
+                petas.forEach(peta => {
+                    const marker = new mapboxgl.Marker()
+                        .setLngLat([peta.longitude, peta.lattitude])
+                        .setPopup(new mapboxgl.Popup().setHTML(`<h3>${peta.keterangan}</h3>`))
+                        .addTo(mapId);
+                    markers.push(marker);
+                });
+            }
+            // Panggil fungsi pertama kali
+            displayMarkers(@json($petas));
         })
     </script>
 @endpush
