@@ -12,6 +12,7 @@
     <link rel="icon" sizes="180x180" href="{{ asset('assets/img/windmill.png') }}">
     @livewireStyles
     <link href="https://api.mapbox.com/mapbox-gl-js/v3.9.2/mapbox-gl.css" rel="stylesheet">
+    @stack('styles')
 </head>
 <body>
 <div class="flex h-screen bg-gray-50 dark:bg-gray-900">

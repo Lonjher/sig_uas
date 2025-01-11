@@ -1,8 +1,8 @@
 <div class="h-screen overflow-hidden p-3">
     <h2 class="font-bold">Map Location</h2>
-    <div class="grid grid-cols-3 grid-flow-col gap-4">
-        <div id="mapId" class="w-full h-full rounded-md col-span-2"></div>
-        <div class="col-span-1 shadow-md rounded-md p-4">
+    <div class="grid gap-4 grid-rows-2 md:grid-rows-2 xl:grid-cols-3">
+        <div id="mapId" class="w-full h-full rounded-md xl:col-span-2"></div>
+        <div class="xl:col-span-1 shadow-md rounded-md p-4">
             @if ($errors->any())
                 <div class="p-4 mb-4 text-xs text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
                     role="alert">
@@ -78,22 +78,81 @@
             });
 
             function displayMarkers(petas) {
-                // Hapus semua marker sebelumnya
                 markers.forEach(marker => marker.remove());
                 markers = [];
-
-                console.log(petas[0])
-                // Tambahkan marker baru
                 petas.forEach(peta => {
                     const marker = new mapboxgl.Marker()
                         .setLngLat([peta.longitude, peta.lattitude])
-                        .setPopup(new mapboxgl.Popup().setHTML(`<h3>${peta.keterangan}</h3>`))
+                        .setPopup(new mapboxgl.Popup({
+                                offset: 25
+                            })
+                            .setHTML(`<h3>${peta.keterangan}</h3>`))
                         .addTo(mapId);
                     markers.push(marker);
                 });
             }
             // Panggil fungsi pertama kali
             displayMarkers(@json($petas));
+
+            mapId.on('load', () => {
+                // Add a data source containing GeoJSON data
+                mapId.addSource('dataPolygon', {
+                    'type': 'geojson',
+                    'data': {
+                        'type': 'Feature',
+                        'geometry': {
+                            'type': 'Polygon',
+                            // Coordinates outline the polygon
+                            'coordinates': [
+                                [
+                                    [113.67418487892104, -7.062662000895344],
+                                    [113.67454301220755, -7.062408361747529],
+                                    [113.6765189954931, -7.063347690176826],
+                                    [113.67795599260268, -7.0630681045446556],
+                                    [113.67870666273404, -7.0632596691435627],
+                                    [113.67868521501623, -7.063515088487435],
+                                    [113.67881390132419, -7.063940787078963],
+                                    [113.67859942414384, -7.064260060765477],
+                                    [113.67870666273404, -7.064558049340917],
+                                    [113.67817046978308, -7.065579722998024],
+                                    [113.6782133652186, -7.065558438152152],
+                                    [113.6789425876322, -7.066473685594758],
+                                    [113.67414119603825, -7.0679512688613215],
+                                    [113.67370397421354, -7.06638096381603],
+                                    [113.6739538152558, -7.065306541499666],
+                                    [113.67380807464804, -7.064542047178051],
+                                    [113.6740370956037, -7.062558488446612],
+                                    [113.67418487892104, -7.062662000895344]
+                                ]
+                            ]
+                        }
+                    }
+                });
+
+                // Add a new layer to visualize the polygon
+                mapId.addLayer({
+                    'id': 'maine',
+                    'type': 'fill',
+                    'source': 'dataPolygon', // Reference the data source
+                    'layout': {},
+                    'paint': {
+                        'fill-color': '#0080ff', // Blue color fill
+                        'fill-opacity': 0.5
+                    }
+                });
+
+                // Add a black outline around the polygon
+                mapId.addLayer({
+                    'id': 'outline',
+                    'type': 'line',
+                    'source': 'dataPolygon',
+                    'layout': {},
+                    'paint': {
+                        'line-color': '#000',
+                        'line-width': 3
+                    }
+                });
+            })
         })
     </script>
 @endpush
