@@ -1,4 +1,4 @@
-<p align="center"><a href="https://ua.ac.id" target="_blank"><img src="./public/assets/logo/ua-logo.png" width="400" alt="UA Logo"></a></p>
+<p align="center"><a href="https://ua.ac.id" target="_blank"><img src="./public/assets/logo/ua-logo.png" width="200" alt="UA Logo"></a></p>
 
 <p align="center">
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
