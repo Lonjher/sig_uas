@@ -1,5 +1,5 @@
 <div class="h-screen overflow-hidden p-3">
-    <h2 class="font-bold">Map Location</h2>
+    <h2 class="font-bold dark:text-white">Map Location</h2>
     <div class="grid gap-4 grid-rows-2 md:grid-rows-2 xl:grid-cols-3">
         <div id="mapId" class="w-full h-full rounded-md xl:col-span-2"></div>
         <div class="xl:col-span-1 shadow-md rounded-md p-4">
@@ -106,7 +106,7 @@
                             'coordinates': [
                                 [
                                     [113.67418487892104, -7.062662000895344],
-                                    [113.67454301220755, -7.062408361747529],
+                                    [113.67454243342769, -7.0622902643332],
                                     [113.6765189954931, -7.063347690176826],
                                     [113.67795599260268, -7.0630681045446556],
                                     [113.67870666273404, -7.0632596691435627],

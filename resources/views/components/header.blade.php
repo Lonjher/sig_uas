@@ -3,7 +3,7 @@
         <div class="flex justify-center items-center">
             <img src="{{ asset("assets/logo/ua.png") }}" alt="ua" width="50">
             <span class="flex flex-col">
-                <span class="text-lg ml-2 font-sans text-gray-900">Universitas Annuqayah</span>
+                <span class="text-lg ml-2 font-sans text-gray-900 dark:text-white">Universitas Annuqayah</span>
             </span>
         </div>
     </div>
