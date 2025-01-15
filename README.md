@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://github.com/Lonjher/sig_uas/tree/main/public/assets/logo/ua-logo.png" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://ua.ac.id" target="_blank"><img src="./public/assets/logo/ua-logo.png" width="400" alt="UA Logo"></a></p>
 
 <p align="center">
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
@@ -7,60 +7,55 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## About This Project
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Proyek ini diajukan sebagai tugas Mata Kuliah Implementasi Sistem Informasi Geografis (SIG) Semester VII Universitas Annuqayah. Proyek ini berupa aplikasi sederhana dari implemtasi SIG dengan beberapa capability salah satunya:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- [Menambahkan marker](https://laravel.com/docs/routing).
+- [Menentukan marker pada peta](https://laravel.com/docs/container).
+- Menambahkan data [Polygon](https://id.wikipedia.org/wiki/Poligon) walaupun berupa data statis.
+- Implementasi [Livewire](https://livewire.laravel.com/).
+- Integrasi dengan [MapBox](https://www.mapbox.com/).
+- Menggunakan Framework CSS [TailwindCss](https://tailwindcss.com/).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Semuanya tercover dalam sebuah framework pengembangan Website [Laravel](https://laravel.com).
 
-## Learning Laravel
+## Dokumentasi Proyek
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Halaman Utama
+<img src="./public/assets/screenshot/hal1.png" width="600" alt="Utama">
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Halaman Deskripsi Proyek
+<img src="./public/assets/screenshot/hal2.png" width="600" alt="Project Description">
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Teknologi yang digunakan
+<img src="./public/assets/screenshot/hal3.png" width="600" alt="Technology">
 
-## Laravel Sponsors
+### Halaman Peta
+<img src="./public/assets/screenshot/hal4.png" width="600" alt="Map">
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Instalasi
 
-### Premium Partners
+- **Clone repository ini:**
+  <p>git clone https://github.com/lonjher/sig_uas.git</p>
+- **Masuk ke direktori proyek:**
+  <p>cd sig_uas</p>
+- **Salin file .env.example menjadi .env:**
+  <p>cp .env.example .env</p>
+- **Buat Key:**
+  <p>php artisan key:generate</p>
+- **Instal dependensi dengan Composer dan NPM:**
+  <ul>
+      <li>composer install</li>
+      <li>npm install</li>
+      <li>npm run dev</li>
+  </ul>
+- **Migrasi dan seeding database:**
+  <p>php artisan migrate --seed</p>
+- **Jalankan server pengembangan Laravel:**
+  <p>php artisan serve</p>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## Penggunaan
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+1. Akses aplikasi melalui browser di <p>http://localhost:8000<p/>.
+3. Mulai eksplorasi fitur aplikasi.
