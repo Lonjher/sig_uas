@@ -31,8 +31,11 @@ Semuanya tercover dalam sebuah framework pengembangan Website [Laravel](https://
 ### Teknologi yang digunakan
 <img src="./public/assets/screenshot/hal3.png" width="600" alt="Technology">
 
+### Halaman Data Peta
+<img src="./public/assets/screenshot/hal4.png" width="600" alt="Map Data">
+
 ### Halaman Peta
-<img src="./public/assets/screenshot/hal4.png" width="600" alt="Map">
+<img src="./public/assets/screenshot/hal5.png" width="600" alt="Map">
 
 ### Instalasi
 
@@ -55,7 +58,7 @@ Semuanya tercover dalam sebuah framework pengembangan Website [Laravel](https://
 - **Jalankan server pengembangan Laravel:**
   <p>php artisan serve</p>
 
-## Penggunaan
+### Penggunaan
 
 1. Akses aplikasi melalui browser di <p>http://localhost:8000<p/>.
 3. Mulai eksplorasi fitur aplikasi.
