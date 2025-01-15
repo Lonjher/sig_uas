@@ -1,12 +1,5 @@
 <p align="center"><a href="https://ua.ac.id" target="_blank"><img src="./public/assets/logo/ua-logo.png" width="200" alt="UA Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
 ## About This Project
 
 Proyek ini diajukan sebagai tugas Mata Kuliah Implementasi Sistem Informasi Geografis (SIG) Semester VII Universitas Annuqayah. Proyek ini berupa aplikasi sederhana dari implemtasi SIG dengan beberapa capability salah satunya:
@@ -23,19 +16,19 @@ Semuanya tercover dalam sebuah framework pengembangan Website [Laravel](https://
 ## Dokumentasi Proyek
 
 ### Halaman Utama
-<img src="./public/assets/screenshot/hal1.png" width="600" alt="Utama">
+<p align="center"><img src="./public/assets/screenshot/hal1.png" width="600" alt="Utama"></p>
 
 ### Halaman Deskripsi Proyek
-<img src="./public/assets/screenshot/hal2.png" width="600" alt="Project Description">
+<p align="center"><img src="./public/assets/screenshot/hal2.png" width="600" alt="Project Description"></p>
 
 ### Teknologi yang digunakan
-<img src="./public/assets/screenshot/hal3.png" width="600" alt="Technology">
+<p align="center"><img src="./public/assets/screenshot/hal3.png" width="600" alt="Technology"></p>
 
 ### Halaman Data Peta
-<img src="./public/assets/screenshot/hal4.png" width="600" alt="Map Data">
+<p align="center"><img src="./public/assets/screenshot/hal4.png" width="600" alt="Map Data"></p>
 
 ### Halaman Peta
-<img src="./public/assets/screenshot/hal5.png" width="600" alt="Map">
+<p align="center"><img src="./public/assets/screenshot/hal5.png" width="600" alt="Map"></p>
 
 ### Instalasi
 
